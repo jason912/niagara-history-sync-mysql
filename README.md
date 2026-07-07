@@ -15,6 +15,18 @@ This tool synchronizes **history data from a single JACE/Niagara Station** into 
 
 This script is designed to be **run periodically** (e.g., daily cron job) to keep MySQL data in sync with the station.
 
+### Database format
+
+The MySQL table structure follows the history format returned by the oBIX query response. Each row contains:
+
+| Column | Type | Description |
+|---|---|---|
+| `id` | BIGINT AUTO_INCREMENT | Primary key |
+| `ts` | DATETIME(3) | Timestamp (Asia/Shanghai) |
+| `val` | DOUBLE / VARCHAR | The history value |
+
+> **Note:** Status information (e.g., `fault` or `ok`) is **not** available from the oBIX history response. The tool currently does not capture per-record quality/status fields. If you need status tracking, this must be handled separately at the Niagara station level.
+
 ---
 
 ## Table of Contents
