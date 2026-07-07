@@ -25,7 +25,7 @@ The MySQL table structure follows the history format returned by the oBIX query 
 | `ts` | DATETIME(3) | Timestamp (Asia/Shanghai) |
 | `val` | DOUBLE / VARCHAR | The history value |
 
-> **Note:** Status information (e.g., `fault` or `ok`) is **not** available from the oBIX history response. The tool currently does not capture per-record quality/status fields. If you need status tracking, this must be handled separately at the Niagara station level.
+> **Tested result:** Status information (e.g., `fault` or `ok`) is **not** available from the oBIX history response — we tested and could not find the status value in the oBIX history data. The tool currently does not capture per-record quality/status fields. If you need status tracking, this must be handled separately at the Niagara station level.
 
 ---
 
