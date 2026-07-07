@@ -1,7 +1,5 @@
 # Niagara History Sync v3.3
 
-> **Disclaimer:** This software is provided under the MIT license, "AS IS", without warranty of any kind. The authors are not liable for any data loss, corruption, or production incidents. You are responsible for testing in a staging environment before production use.
-
 ---
 
 ## Purpose
