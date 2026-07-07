@@ -1,0 +1,24 @@
+{
+  "_note": "Niagara History Sync v3.3 configuration file",
+  "version": "3.3",
+  "source": {
+    "_note": "Niagara N4 station oBIX connection",
+    "host": "192.168.2.146",
+    "port": 80,
+    "user": "Obix",
+    "pass": "Obix12345678",
+    "historyBase": "/obix/histories/LiyuCloud/"
+  },
+  "target": {
+    "_note": "MySQL database target",
+    "host": "192.168.2.232",
+    "port": 3306,
+    "user": "root",
+    "password": "123456",
+    "database": "liyuCloud"
+  },
+  "sync": {
+    "_note": "Sync behaviour settings",
+    "limit": 100000
+  }
+}
