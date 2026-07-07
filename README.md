@@ -1,8 +1,21 @@
 # Niagara History Sync v3.3
 
-Copies historical data from a Niagara N4 station (via oBIX) into MySQL tables.
-
 > **Disclaimer:** This software is provided under the MIT license, "AS IS", without warranty of any kind. The authors are not liable for any data loss, corruption, or production incidents. You are responsible for testing in a staging environment before production use.
+
+---
+
+## Purpose
+
+This tool synchronizes **history data from a single JACE/Niagara Station** into a **MySQL database** using the oBIX protocol.
+
+### How it works
+
+1. Uses **oBIX** to read history records from the Niagara station
+2. Writes each history point into its own MySQL table
+3. Tracks the **last synced timestamp** per point in a `_sync_state` table
+4. On subsequent runs, only fetches data **newer than the last checkpoint** — perfect incremental sync
+
+This script is designed to be **run periodically** (e.g., daily cron job) to keep MySQL data in sync with the station.
 
 ---
 
